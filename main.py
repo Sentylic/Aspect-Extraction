@@ -14,7 +14,7 @@ with Path.cwd().joinpath("stop_words_en.txt").open(encoding="utf-8") as f:
 
 print("{} stop words are read.".format(len(stop_words)))
 
-# Util.convertXMLToJson("ABSA15_Restaurants_Test.xml", "ABSA15_Restaurants_Test.json")
+# Util.convertXMLToJson("Data/ABSA-15_Restaurants_Train.xml", "Data/ABSA-15_Restaurants_Train.json")
 
 label_kinds = []
 
@@ -55,7 +55,7 @@ def tokenize(sentence):
     return res_tokens
 
 
-with open("ABSA15_Restaurants_Test.json") as j:
+with open("Data/ABSA-15_Restaurants_Train.json") as j:
     reviews = json.load(j)['Reviews']['Review']
     for d in reviews:
         for s in d["sentences"]['sentence']:
